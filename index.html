@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latin America Travel app</title>
+    <title>Latin America Travel App</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="leaflet.css">
 </head>
 <body>
+<section>
+    <header>
+        <h1>Latin America Travel App</h1>
+    </header>
+    <p>Welcome to the Latin America Travel App!</p>
+</section>
 <div id="map" style="height: 600px;"></div>
 <script src="leaflet.js"></script>
     <script src="index.js"></script>
@@ -16,8 +22,23 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+const countries = [
+  { name: 'Brazil', lat: -14.2350, lng: -51.9253 },
+  { name: 'Argentina', lat: -38.4161, lng: -63.6167 },
+  { name: 'Colombia', lat: 4.5709, lng: -74.2973 },
+  { name: 'Chile', lat: -35.6751, lng: -71.5430 },
+  { name: 'Peru', lat: -9.1900, lng: -75.0152 },
+  { name: 'Venezuela', lat: 6.4238, lng: -66.5897 },
+  { name: 'Ecuador', lat: -1.8312, lng: -78.1834 },
+  { name: 'Guatemala', lat: 15.7835, lng: -90.2308 },
+   { name: 'Bolivia', lat: -16.2902, lng: -63.5887 },
+];
+countries.forEach(country => {
+  L.marker([country.lat, country.lng]).addTo(map)
+    .bindPopup(`<b>${country.name}</b>`);
+});
+
 map.fitBounds([[13, -82], [-56, -34]]);
 </script>
-
 </body>
 </html>
