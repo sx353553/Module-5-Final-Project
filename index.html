@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin America Travel app</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="leaflet.css">
+</head>
+<body>
+<div id="map" style="height: 600px;"></div>
+<script src="leaflet.js"></script>
+    <script src="index.js"></script>
+    <script>const map = L.map('map').setView([0, -80], 3); // Latin America-ish
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap'
+}).addTo(map);
+
+map.fitBounds([[13, -82], [-56, -34]]);
+</script>
+
+</body>
+</html>
