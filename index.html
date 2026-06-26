@@ -23,15 +23,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const countries = [
-  { name: 'Brazil', lat: -14.2350, lng: -51.9253 },
-  { name: 'Argentina', lat: -38.4161, lng: -63.6167 },
-  { name: 'Colombia', lat: 4.5709, lng: -74.2973 },
-  { name: 'Chile', lat: -35.6751, lng: -71.5430 },
-  { name: 'Peru', lat: -9.1900, lng: -75.0152 },
-  { name: 'Venezuela', lat: 6.4238, lng: -66.5897 },
-  { name: 'Ecuador', lat: -1.8312, lng: -78.1834 },
-  { name: 'Guatemala', lat: 15.7835, lng: -90.2308 },
-   { name: 'Bolivia', lat: -16.2902, lng: -63.5887 },
+  { name: 'Rio de Janeiro, Brazil', lat: -14.2350, lng: -51.9253 },
+  { name: 'Buenos Aires, Argentina', lat: -22.9068, lng: -43.1729 },
+  { name: 'Bogata, Colombia', lat: 4.7110, lng: -74.0721 },
+  { name: 'Santiago, Chile', lat: -33.4489, lng: -70.6693 },
+  { name: 'Machu Picchu, Peru', lat: -13.1631, lng: -72.5449 },
+  { name: 'Caracas, Venezuela', lat: 10.4757816, lng: -66.8733450 },
+  { name: 'Manta, Ecuador', lat: -0.982056, lng: -80.694769 },
+  { name: 'Guatemala City, Guatemala', lat:14.635268, lng: -90.508191 },
+   { name: 'Cochabamba, Bolivia', lat: -17.363069, lng: -66.128450 },
+   { name: 'Asuncion, Paraguay', lat: -25.2637, lng: -57.5759 },
+   { name: 'Montevideo, Uruguay', lat: -34.9011, lng: -56.1645 }
 ];
 countries.forEach(country => {
   L.marker([country.lat, country.lng]).addTo(map)
