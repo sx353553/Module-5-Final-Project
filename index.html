@@ -15,6 +15,29 @@
     </header>
   </div>
     <p>Welcome to the Latin America Travel App!</p>
+    <p>Explore the beautiful countries of Latin America! 
+      Where culture meets nature and adventure.
+      And breathtaking landscapes await you!</p>
+</section>
+<section></section>
+<div class="container">
+  <div class="row">
+  <h2>Top Destinations</h2>
+  <ul>
+    <li>Rio de Janeiro, Brazil</li>
+    <li>Mar De la Plata, Argentina</li>
+    <li>Bogata, Colombia</li>
+    <li>Santiago, Chile</li>
+    <li>Machu Picchu, Peru</li>
+    <li>Caracas, Venezuela</li>
+    <li>Manta, Ecuador</li>
+    <li>Guatemala City, Guatemala</li>
+    <li>Cochabamba, Bolivia</li>
+    <li>Asuncion, Paraguay</li>
+    <li>Montevideo, Uruguay</li>
+  </ul>
+  </div>
+ </div>
 </section>
 <div id="map" style="height: 600px;"></div>
 <script src="leaflet.js"></script>
@@ -26,7 +49,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const countries = [
   { name: 'Rio de Janeiro, Brazil', lat: -14.2350, lng: -51.9253 },
-  { name: 'Buenos Aires, Argentina', lat: -22.9068, lng: -43.1729 },
+  { name: 'Mar De la Plata, Argentina', lat: -37.583139, lng: -57.578575 },
   { name: 'Bogata, Colombia', lat: 4.7110, lng: -74.0721 },
   { name: 'Santiago, Chile', lat: -33.4489, lng: -70.6693 },
   { name: 'Machu Picchu, Peru', lat: -13.1631, lng: -72.5449 },
@@ -35,7 +58,7 @@ const countries = [
   { name: 'Guatemala City, Guatemala', lat:14.635268, lng: -90.508191 },
    { name: 'Cochabamba, Bolivia', lat: -17.363069, lng: -66.128450 },
    { name: 'Asuncion, Paraguay', lat: -25.2637, lng: -57.5759 },
-   { name: 'Montevideo, Uruguay', lat: -34.9011, lng: -56.1645 }
+   { name: 'Montevideo, Uruguay', lat: -34.837998, lng: -56.238568 }
 ];
 countries.forEach(country => {
   L.marker([country.lat, country.lng]).addTo(map)
