@@ -45,6 +45,7 @@ ul {
     text-align: center;
     padding-top: 20px;
     flex: 1;
+    list-style-type: none;
 }
 
 
