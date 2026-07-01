@@ -27,7 +27,7 @@ header {
 
 h2 {
     text-align: center;
-    padding-top: 48px;
+    padding-top: 16px;
     font-size: 28px;
 }
 
@@ -35,9 +35,23 @@ p{
     text-align: center;
     font-size: 20px;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Destinations*/
+
+.destination__container {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 ul {
     display: flex;
