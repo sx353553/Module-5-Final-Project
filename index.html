@@ -25,18 +25,18 @@
 <div class="destination__container">
   <div class="row">
   <h2>Top Destinations</h2>
-   <img src="/Assets/Rio De Jenerio, Brazil.avif" alt="">
-      <img src="/Assets/Mar Del La Plata, Argentina.avif" alt="">
-      <img src="/Assets/Bogata, Columbia.avif" alt="">
-      <img src="/Assets/Santiago, Chile.avif" alt="">
-      <img src="/Assets/Machu Picchu.avif" alt="">
-      <img src="/Assets/Caracas, Venezuela.avif" alt="">
-      <img src="/Assets/Galapagos Islands, Ecuador.avif" alt="">
-      <img src="/Assets/Guatemala City Guatemala.avif" alt="">
-      <img src="/Assets/La Paz Bolivia.avif" alt="">
-      <img src="/Assets/Asuncion Paraguay.avif" alt="">
-      <img src="/Assets/Punta De Este Uruguay.avif" alt="">
-      <img src="/Assets/San Jose Costa Rica.avif" alt="">
+   <img src="/Assets/Rio De Jenerio, Brazil.avif" alt="Rio de Janeiro, Brazil">
+      <img src="/Assets/Mar Del La Plata, Argentina.avif" alt="Mar del Plata, Argentina">
+      <img src="/Assets/Bogata, Columbia.avif" alt="Bogotá, Colombia">
+      <img src="/Assets/Santiago, Chile.avif" alt="Santiago, Chile">
+      <img src="/Assets/Machu Picchu.avif" alt="Machu Picchu, Peru">
+      <img src="/Assets/Caracas, Venezuela.avif" alt="Caracas, Venezuela">
+      <img src="/Assets/Galapagos Islands, Ecuador.avif" alt="Galápagos Islands, Ecuador">
+      <img src="/Assets/Guatemala City Guatemala.avif" alt="Guatemala City, Guatemala">
+      <img src="/Assets/La Paz Bolivia.avif" alt="La Paz, Bolivia">
+      <img src="/Assets/Asuncion Paraguay.avif" alt="Asuncion, Paraguay">
+      <img src="/Assets/Punta De Este Uruguay.avif" alt="Punta del Este, Uruguay">
+      <img src="/Assets/San Jose Costa Rica.avif" alt="San Jose, Costa Rica">
   <ul>
     <li>Rio de Janeiro, Brazil</li>
     <li>Mar De la Plata, Argentina</li>
@@ -79,7 +79,9 @@ const countries = [
 ];
 countries.forEach(country => {
   L.marker([country.lat, country.lng]).addTo(map)
-    .bindPopup(`<b>${country.name}</b>`);
+    .bindPopup(`<b>${country.name}</b><br>
+    <img src="${country.imgUrl}" alt="${country.name}" style="width:150px; border-radius:5px;">
+    `);
 });
 
 map.fitBounds([[13, -82], [-56, -34]]);
