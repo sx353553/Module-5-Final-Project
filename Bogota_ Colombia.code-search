@@ -1,0 +1,20 @@
+# Query: Bogata, Columbia
+# ContextLines: 1
+
+4 results - 1 file
+
+index.html:
+   40              class="destination-img"
+   41:             src="/Assets/Bogota, Colombia.avif"
+   42              alt="Bogotá, Colombia"
+
+   91              <li>Mar Del la Plata, Argentina</li>
+   92:             <li>Bogota, Colombia</li>
+   93              <li>Santiago, Chile</li>
+
+  128          {
+  129:           name: "Bogota, Colombia",
+  130            lat: 4.711,
+  131            lng: -74.0721,
+  132:           imgUrl: "/Assets/Bogota, Colombia.avif",
+  133          },
