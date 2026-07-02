@@ -60,11 +60,6 @@ ul {
     padding-top: 20px;
     flex: 1;
     list-style-type: none;
-    max-width: 100%;
-}
-
-li {
-    max-width: 100%;
 }
 
 
