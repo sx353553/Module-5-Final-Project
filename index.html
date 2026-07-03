@@ -33,12 +33,12 @@
           />
           <img
             class="destination-img"
-            src="/Assets/Mar Del La Plata, Argentina.avif"
-            alt="Mar Del La Plata, Argentina"
+            src="/Assets/Mar Del Plata, Argentina.avif"
+            alt="Mar Del Plata, Argentina"
           />
           <img
             class="destination-img"
-            src="/Assets/Bogata, Columbia.avif"
+            src="/Assets/Bogota, Colombia.avif"
             alt="Bogotá, Colombia"
           />
           <img
@@ -79,17 +79,26 @@
           <img
             class="destination-img"
             src="/Assets/Punta De Este Uruguay.avif"
-            alt="Punta del Este, Uruguay"
+            alt="Punta De Este, Uruguay"
           />
           <img
             class="destination-img"
             src="/Assets/San Jose Costa Rica.avif"
             alt="San Jose, Costa Rica"
           />
-          <ul>
+          <div class="list-filter">
+         <label for="sort-filter">Sort locations:</label>
+          <select id="sort-filter">
+            <option value="default">Default</option>
+            <option value="city-az">City A-Z</option>
+            <option value="city-za">City Z-A</option>
+            <option value="country-az">Country A-Z</option>
+          </select>
+          </div>
+          <ul id="location-list">
             <li>Rio de Janeiro, Brazil</li>
-            <li>Mar Del la Plata, Argentina</li>
-            <li>Bogata, Columbia</li>
+            <li>Mar Del Plata, Argentina</li>
+            <li>Bogota, Colombia</li>
             <li>Santiago, Chile</li>
             <li>Machu Picchu, Peru</li>
             <li>Caracas, Venezuela</li>
@@ -97,7 +106,7 @@
             <li>Guatemala City, Guatemala</li>
             <li>La Paz, Bolivia</li>
             <li>Asuncion, Paraguay</li>
-            <li>Punta del Este, Uruguay</li>
+            <li>Punta De Este, Uruguay</li>
             <li>San Jose, Costa Rica</li>
           </ul>
         </div>
@@ -120,16 +129,16 @@
           imgUrl: "/Assets/Rio De Jenerio, Brazil.avif",
         },
         {
-          name: "Mar Del la Plata, Argentina",
+          name: "Mar Del Plata, Argentina",
           lat: -37.583139,
           lng: -57.578575,
-          imgUrl: "/Assets/Mar Del La Plata, Argentina.avif",
+          imgUrl: "/Assets/Mar Del Plata, Argentina.avif",
         },
         {
-          name: "Bogata, Columbia",
+          name: "Bogota, Colombia",
           lat: 4.711,
           lng: -74.0721,
-          imgUrl: "/Assets/Bogata, Columbia.avif",
+          imgUrl: "/Assets/Bogota, Colombia.avif",
         },
         {
           name: "Santiago, Chile",
@@ -174,7 +183,7 @@
           imgUrl: "/Assets/Asuncion Paraguay.avif",
         },
         {
-          name: "Punta del Este, Uruguay",
+          name: "Punta De Este, Uruguay",
           lat: -34.92715,
           lng: -54.923869,
           imgUrl: "/Assets/Punta De Este Uruguay.avif",
@@ -186,9 +195,16 @@
           imgUrl: "/Assets/San Jose Costa Rica.avif",
         },
       ];
+      const pinIcon = L.icon({
+        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        iconSize: [25, 41], // width, height of the pin
+        iconAnchor: [12, 41], // point of the pin that sits on the coordinate
+        popupAnchor: [0, -41], // where the popup opens from
+      });
       countries.forEach((country) => {
-        const marker = L.marker([country.lat, country.lng]).addTo(map)
-          .bindPopup(`<b>${country.name}</b><br>
+        const marker = L.marker([country.lat, country.lng], {
+          icon: pinIcon,
+        }).addTo(map).bindPopup(`<b>${country.name}</b><br>
     <img src="${country.imgUrl}" alt="${country.name}" style="width:150px; border-radius:5px;">
     `);
 
@@ -209,5 +225,9 @@
         [-56, -34],
       ]);
     </script>
+
+    <footer>
+      <p>&copy; 2023 Travel Guide. All rights reserved.</p>
+    </footer>
   </body>
 </html>
