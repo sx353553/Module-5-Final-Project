@@ -41,4 +41,19 @@ sortFilter.addEventListener("change", () => {
   locationList.innerHTML = "";
   items.forEach((item) => locationList.appendChild(item));
 });
+
+const imageModal = document.querySelector("#image-modal");
+const modalImg = document.querySelector("#modal-img");
+const closeModal = document.querySelector("#close-modal");
+
+document.addEventListener("click", (event) => {
+  if (event.target.tagName === "IMG") {
+    modalImg.src = event.target.src;
+    imageModal.style.display = "flex";
+  }
+});
+
+closeModal.addEventListener("click", () => {
+  imageModal.style.display = "none";
+});
  

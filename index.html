@@ -87,13 +87,13 @@
             alt="San Jose, Costa Rica"
           />
           <div class="list-filter">
-         <label for="sort-filter">Sort locations:</label>
-          <select id="sort-filter">
-            <option value="default">Default</option>
-            <option value="city-az">City A-Z</option>
-            <option value="city-za">City Z-A</option>
-            <option value="country-az">Country A-Z</option>
-          </select>
+            <label for="sort-filter">Sort locations:</label>
+            <select id="sort-filter">
+              <option value="default">Default</option>
+              <option value="city-az">City A-Z</option>
+              <option value="city-za">City Z-A</option>
+              <option value="country-az">Country A-Z</option>
+            </select>
           </div>
           <ul id="location-list">
             <li>Rio de Janeiro, Brazil</li>
@@ -114,7 +114,7 @@
     </section>
     <div id="map" style="height: 600px"></div>
     <script src="leaflet.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script>
       const map = L.map("map").setView([0, -80], 3); // Latin America-ish
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -225,9 +225,12 @@
         [-56, -34],
       ]);
     </script>
-
-    <footer>
-      <p>&copy; 2023 Travel Guide. All rights reserved.</p>
-    </footer>
+    <div id="image-modal" class="image-modal">
+      <span id="close-modal">&times;</span>
+      <img id="modal-img" src="" alt="Large destination image" />
+    </div>
   </body>
+  <footer>
+    <p>&copy; 2023 Travel Guide. All rights reserved.</p>
+  </footer>
 </html>
