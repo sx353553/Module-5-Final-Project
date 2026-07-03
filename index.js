@@ -47,7 +47,10 @@ const modalImg = document.querySelector("#modal-img");
 const closeModal = document.querySelector("#close-modal");
 
 document.addEventListener("click", (event) => {
-  if (event.target.tagName === "IMG") {
+  if (
+    event.target.classList.contains("destination-img") ||
+    event.target.classList.contains("popup-image")
+  ) {
     modalImg.src = event.target.src;
     imageModal.style.display = "flex";
   }

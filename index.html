@@ -26,6 +26,7 @@
       <div class="destination__container">
         <div class="row">
           <h2>Top Destinations</h2>
+          <div class="destination__images">
           <img
             class="destination-img"
             src="/Assets/Rio De Jenerio, Brazil.avif"
@@ -86,6 +87,7 @@
             src="/Assets/San Jose Costa Rica.avif"
             alt="San Jose, Costa Rica"
           />
+          </div>
           <div class="list-filter">
             <label for="sort-filter">Sort locations:</label>
             <select id="sort-filter">
@@ -202,11 +204,12 @@
         popupAnchor: [0, -41], // where the popup opens from
       });
       countries.forEach((country) => {
-        const marker = L.marker([country.lat, country.lng], {
-          icon: pinIcon,
-        }).addTo(map).bindPopup(`<b>${country.name}</b><br>
-    <img src="${country.imgUrl}" alt="${country.name}" style="width:150px; border-radius:5px;">
-    `);
+    const marker = L.marker([country.lat, country.lng], {
+        icon: pinIcon,
+      }).addTo(map).bindPopup(`
+  <b>${country.name}</b><br>
+  <img src="${country.imgUrl}" alt="${country.name}" style="width: 100px; height: auto;">
+`);
 
         country.marker = marker; // Store the marker in the country object for later use
       });

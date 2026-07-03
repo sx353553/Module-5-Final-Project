@@ -49,8 +49,14 @@ img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    padding-top: 20px;
-    padding-bottom: 20px;
+}
+
+.destination-images {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 #modal-img {
