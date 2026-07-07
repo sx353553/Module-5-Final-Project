@@ -54,9 +54,16 @@ document.addEventListener("click", (event) => {
     modalImg.src = event.target.src;
     imageModal.style.display = "flex";
   }
-});
+
+  });
 
 closeModal.addEventListener("click", () => {
   imageModal.style.display = "none";
 });
+
+ const modalTitle = document.querySelector("#modal-title");
+modalTitle.textContent = event.target.alt;x
+
+
+
  

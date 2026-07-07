@@ -34,6 +34,7 @@
             src="/Assets/Rio De Jenerio, Brazil.avif"
             alt="Rio de Janeiro, Brazil"
           />
+          <p class="img__title">Rio de Janeiro, Brazil</p>
           </div>
           </div>
           <div class="img__container">
@@ -43,6 +44,7 @@
             src="/Assets/Mar Del Plata, Argentina.avif"
             alt="Mar Del Plata, Argentina"
           />
+          <p class="img__title">Mar Del Plata, Argentina</p>
           </div>
           </div>
           <div class="img__container">
@@ -52,6 +54,7 @@
             src="/Assets/Bogota, Colombia.avif"
             alt="Bogotá, Colombia"
           />
+          <p class="img__title">Bogotá, Colombia</p>
           </div>
           </div>
           <div class="img__container">
@@ -61,6 +64,7 @@
             src="/Assets/Santiago, Chile.avif"
             alt="Santiago, Chile"
           />
+          <p class="img__title">Santiago, Chile</p>
           </div>
           </div>
           <div class="img__container">
@@ -70,6 +74,7 @@
             src="/Assets/Machu Picchu.avif"
             alt="Machu Picchu, Peru"
           />
+          <p class="img__title">Machu Picchu, Peru</p>
           </div>
           </div>
           <div class="img__container">
@@ -79,6 +84,7 @@
             src="/Assets/Caracas, Venezuela.avif"
             alt="Caracas, Venezuela"
           />
+          <p class="img__title">Caracas, Venezuela</p>
           </div>
           </div>
           <div class="img__container">
@@ -88,6 +94,7 @@
             src="/Assets/Galapagos Islands, Ecuador.avif"
             alt="Galápagos Islands, Ecuador"
           />
+          <p class="img__title">Galápagos Islands, Ecuador</p>
           </div>
           </div>
           <div class="img__container">
@@ -97,6 +104,7 @@
             src="/Assets/Guatemala City Guatemala.avif"
             alt="Guatemala City, Guatemala"
           />
+          <p class="img__title">Guatemala City, Guatemala</p>
           </div>
           </div>
           <div class="img__container">
@@ -106,6 +114,7 @@
             src="/Assets/La Paz Bolivia.avif"
             alt="La Paz, Bolivia"
           />
+          <p class="img__title">La Paz, Bolivia</p>
           </div>
           </div>
           <div class="img__container">
@@ -115,6 +124,7 @@
             src="/Assets/Asuncion Paraguay.avif"
             alt="Asuncion, Paraguay"
           />
+          <p class="img__title">Asuncion, Paraguay</p>
           </div>
           </div>
           <div class="img__container">
@@ -124,6 +134,7 @@
             src="/Assets/Punta De Este Uruguay.avif"
             alt="Punta De Este, Uruguay"
           />
+          <p class="img__title">Punta De Este, Uruguay</p>
           </div>
           </div>
           <div class="img__container">
@@ -133,6 +144,7 @@
             src="/Assets/San Jose Costa Rica.avif"
             alt="San Jose, Costa Rica"
           />
+          <p class="img__title">San Jose, Costa Rica</p>
           </div>
           </div>
           </div>
@@ -271,6 +283,8 @@
         });
       });
 
+      
+
       map.fitBounds([
         [13, -82],
         [-56, -34],
@@ -279,9 +293,15 @@
     <div id="image-modal" class="image-modal">
       <span id="close-modal">&times;</span>
       <img id="modal-img" src="" alt="Large destination image" />
+      <h2 id="modal-title"></h2>
     </div>
   </body>
   <footer>
-    <p>&copy; 2023 Travel Guide. All rights reserved.</p>
+    <div class="footer__container">
+      <div class="footer__row">
+        <h1>Latin America Travel App</h1>
+        <p> 2026 Latin AmericaTravel App. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 </html>
