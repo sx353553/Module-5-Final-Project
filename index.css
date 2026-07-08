@@ -25,6 +25,11 @@ header {
     font-size: 32px;
 }
 
+.header__container {
+  padding-top: 96px;
+  padding-bottom: 24px;
+}
+
 h2 {
     text-align: center;
     padding-top: 16px;
@@ -155,13 +160,18 @@ li {
 
 @media (max-width: 768px) {
   .destination__images {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+   flex-wrap: wrap;
   }
+
+ .destination {
+  width: calc(50% - 10px);
+}
 
   ul {
     flex-direction: column;
     gap: 10px;
+    font-size: 22px;
   }
 
   .footer__social--list {
@@ -175,14 +185,30 @@ li {
 
 @media (max-width: 480px) {
   .destination__images {
-    flex-direction: column;
-    align-items: center;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
   }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+    }
+  
 
   ul {
     flex-direction: column;
+    font-size: 18px;
     gap: 10px;
-  }
+   }
+  
 
   .footer__social--list {
     width: 80%;

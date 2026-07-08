@@ -62,6 +62,7 @@ closeModal.addEventListener("click", () => {
 });
 
  const modalTitle = document.querySelector("#modal-title");
+ 
 modalTitle.textContent = event.target.alt;x
 
 
