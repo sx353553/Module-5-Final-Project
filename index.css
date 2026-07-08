@@ -151,6 +151,49 @@ li {
   padding-right: 36px;
 }
 
+/* small phones,tablets,large phones */
+
+@media (max-width: 768px) {
+  .destination__images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer__social--list {
+    width: 60%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* small phones */
+
+@media (max-width: 480px) {
+  .destination__images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer__social--list {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
+
 
 
 
