@@ -46,8 +46,11 @@ p{
 /* Destinations*/
 
 .destination__container {
+    display: flex;
+    justify-content: center;
     padding-top: 28px;
     padding-bottom: 28px;
+
 }
 
 img {
@@ -86,6 +89,13 @@ img {
   height: auto;
   max-height: 90vh;
   object-fit: contain;
+}
+
+.list-filter {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 ul {
