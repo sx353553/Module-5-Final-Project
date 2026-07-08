@@ -54,6 +54,7 @@ img {
     width: 200px;
     height: 200px;
     object-fit: cover;
+    padding: 0 15px;
 }
 
 .destination__images {
@@ -99,6 +100,7 @@ ul {
 
 li {
     max-width: 100%;
+    padding: 0 15px;
 }
 
 .image-modal {
