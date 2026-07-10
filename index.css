@@ -43,6 +43,47 @@ p{
     padding-bottom: 20px;
 }
 
+/* City Search */
+
+.city-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.city-search input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 280px;
+}
+
+.city-search button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2a7d4f;
+  color: white;
+  cursor: pointer;
+}
+
+.city-search button:hover {
+  background-color: #1f5c3a;
+}
+
+#city-search-status {
+  padding: 0;
+  font-size: 14px;
+  color: #666;
+  width: 100%;
+  text-align: center;
+}
+
 /* Destinations*/
 
 .destination__container {

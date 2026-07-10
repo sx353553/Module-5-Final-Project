@@ -22,6 +22,10 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="row">
+       </div>
+    </section>
     <section id="destinations">
       <div class="destination__container">
         <div class="row">
@@ -174,11 +178,21 @@
         </div>
       </div>
     </section>
+    <div class="city-search">
+      <input
+        type="text"
+        id="city-search-input"
+        placeholder="Search for a city (e.g. Buenos Aires)"
+      />
+      <button id="city-search-btn">Search</button>
+      <p id="city-search-status"></p>
+    </div>
     <div id="map" style="height: 600px"></div>
     <script src="leaflet.js"></script>
     <script src="index.js" defer></script>
     <script>
       const map = L.map("map").setView([0, -80], 3); // Latin America-ish
+      window.map = map; // expose to index.js for GeoDB search feature
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: "© OpenStreetMap",
       }).addTo(map);
@@ -258,11 +272,15 @@
         },
       ];
       const pinIcon = L.icon({
-        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        iconUrl:
+          "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
+        iconRetinaUrl:
+          "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
         iconSize: [25, 41], // width, height of the pin
         iconAnchor: [12, 41], // point of the pin that sits on the coordinate
         popupAnchor: [0, -41], // where the popup opens from
       });
+      window.redIcon = pinIcon; // expose to index.js so the search marker matches
       countries.forEach((country) => {
     const marker = L.marker([country.lat, country.lng], {
         icon: pinIcon,
@@ -274,6 +292,8 @@
         country.marker = marker; // Store the marker in the country object for later use
       });
 
+      window.countries = countries; // expose to index.js so we can enrich popups with GeoDB data
+
       const images = document.querySelectorAll(".destination-img");
       images.forEach((img, index) => {
         img.addEventListener("click", () => {
@@ -282,8 +302,6 @@
           country.marker.openPopup(); // Open the popup for the clicked destination
         });
       });
-
-      
 
       map.fitBounds([
         [13, -82],
